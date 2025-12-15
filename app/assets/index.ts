@@ -1,0 +1,1 @@
+export {default as Landing} from './img/landing-page.png'
