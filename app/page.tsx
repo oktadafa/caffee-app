@@ -44,7 +44,7 @@ export default function Home() {
                 <IceCoffeeIcon />
               </div>
               <p className="text-center text-primary font-semibold">
-                Ice Coffee
+                Ice Cofee
               </p>
             </button>
           ))}
