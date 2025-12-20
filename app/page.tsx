@@ -1,5 +1,5 @@
-import style from "./main.module.css";
-import { IceCoffeeIcon } from "./components/atoms/icons";
+import style from "./main.module.css"
+import {IceCoffeeIcon} from "./components/atoms/icons"
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -37,8 +37,8 @@ export default function Home() {
           </h1>
           <div className="w-1/3 h-2 bg-primary" />
         </div>
-        <div className="flex justify-center items-center gap-8 mt-5">
-          {Array.from({ length: 4 }).map((item, index) => (
+        <div className="flex justify-center items-center gap-14 mt-5">
+          {Array.from({length: 4}).map((item, index) => (
             <button className="flex flex-col items-center" key={index}>
               <div>
                 <IceCoffeeIcon />
@@ -49,14 +49,30 @@ export default function Home() {
             </button>
           ))}
         </div>
-        <div className="flex justify-center gap-x-4">
-          {Array.from({ length: 4 }).map((item) => (
+        <div className="flex justify-center gap-x-10 mt-4 mb-4">
+          {Array.from({length: 5}).map((item) => (
             <div className="w-52 h-72 rounded-md border-2  px-2 pt-2 border-primary/40 ">
               <div className="bg-primary rounded-md w-full h-48"></div>
+              <div className="flex flex-col  gap-y-2 mt-2">
+                <div className="flex flex-col">
+                  <span className="text-lg leading-5 font-semibold text-primary">
+                    Americano
+                  </span>
+                  <span className="text-xs font-semibold text-primary">
+                    Made with special coffee
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="font-bold text-primary">Rp 15.000</span>
+                  <button className="text-xs bg-primary px-3 py-1 text-white rounded-sm">
+                    Buy Now
+                  </button>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </div>
-  );
+  )
 }
