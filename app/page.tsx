@@ -1,5 +1,7 @@
 import style from "./main.module.css"
 import {IceCoffeeIcon} from "./components/atoms/icons"
+import { Coffe2, Coffe3 } from "./assets"
+import Image from "next/image"
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -49,7 +51,7 @@ export default function Home() {
             </button>
           ))}
         </div>
-        <div className="flex justify-center gap-x-10 mt-4 mb-4">
+        <div className="flex justify-center gap-x-10 mt-4 mb-8">
           {Array.from({length: 5}).map((item) => (
             <div className="w-52 h-72 rounded-md border-2  px-2 pt-2 border-primary/40 ">
               <div className="bg-primary rounded-md w-full h-48"></div>
@@ -71,6 +73,19 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="relative bg-primary w-full flex items-center justify-center h-52">
+        <Image src={Coffe2} width={330} height={270} alt="test" className="absolute top-0 left-0" />
+          <div className="flex flex-col justify-center gap-y-3">
+          <div className="text-3xl text-white font-semibold">
+          Check out our best  coffee betans
+            </div>
+            <div className="flex justify-center">
+            <button className="bg-secondary text-white text-xs font-semibold px-5 py-3
+            ">Explore Our Products</button>
+            </div>
+            </div>
+          <Image src={Coffe3} width={210} height={235} alt="test" className="absolute bottom-0 right-0"/>
         </div>
       </div>
     </div>
