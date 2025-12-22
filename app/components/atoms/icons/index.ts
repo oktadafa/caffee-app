@@ -1,2 +1,6 @@
 export {default as HotCoffeeIcon} from './hot-coffee'
 export {default as IceCoffeeIcon} from './ice-coffee'
+export {default as YoutubeIcon} from './youtube-icon'
+export {default as FacebookIcon} from './facebook-icon'
+export {default as TwitterIcon} from './twitter-icon'
+export {default as InstagramIcon} from './instagram-icon'
