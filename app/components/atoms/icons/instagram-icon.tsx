@@ -1,0 +1,50 @@
+import * as React from "react";
+const InstagramIcon = (props:React.SVGProps<SVGSVGElement>) => (
+  <svg
+    width={31}
+    height={32}
+    viewBox="0 0 31 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <rect
+      x={1}
+      y={1}
+      width={29}
+      height={30}
+      rx={9}
+      fill="#F5EFE6"
+      stroke="#665C50"
+      strokeWidth={2}
+    />
+    <rect
+      x={7}
+      y={8}
+      width={17}
+      height={17}
+      rx={6}
+      stroke="#665C50"
+      strokeWidth={2}
+    />
+    <rect
+      x={12.8572}
+      y={13.25}
+      width={6.09524}
+      height={6.5}
+      rx={3.04762}
+      stroke="#665C50"
+      strokeWidth={2}
+    />
+    <rect
+      x={19.6428}
+      y={11.9}
+      width={1.02381}
+      height={1.125}
+      rx={0.511905}
+      fill="#665C50"
+      stroke="#665C50"
+    />
+  </svg>
+);
+export default InstagramIcon;

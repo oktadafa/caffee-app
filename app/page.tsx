@@ -88,6 +88,10 @@ export default function Home() {
           <Image src={Coffe3} width={210} height={235} alt="test" className="absolute bottom-0 right-0"/>
         </div>
       </div>
+
+      <div>
+        
+      </div>
     </div>
   )
 }
