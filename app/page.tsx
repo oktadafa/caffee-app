@@ -6,18 +6,6 @@ import Image from "next/image"
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <nav className="fixed justify-between items-center top-0 pt-3 px-10 left-0 right-0 flex z-10 text-white">
-        <h1 className="text-3xl font-semibold">Octa Coffee</h1>
-        <div>
-          <ul className="flex gap-x-10">
-            <li>Home</li>
-            <li>Menu</li>
-            <li>Our</li>
-            <li>Store</li>
-          </ul>
-        </div>
-        <button className="bg-secondary px-7 rounded-sm py-1">Login</button>
-      </nav>
       <div className={`${style.landing} relative text-white`}>
         <div className="absolute right-10 bottom-44 flex flex-col gap-y-4">
           <h2 className="text-2xl font-semibold">Welcome!</h2>
