@@ -1,6 +1,12 @@
 pipeline {
     agent any  // Menentukan di mana job dijalankan (biasanya 'any' untuk pemula)
     stages {
+        stage('Nvm Config') {
+            steps {
+             sh 'nvm use v25.2.1'
+             echo 'Selesai ganti node'
+            }
+        } 
         stage('Install') {
             steps {
                 // Untuk Linux/Mac gunakan 'sh', untuk Windows gunakan 'bat'
