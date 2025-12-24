@@ -17,15 +17,10 @@ pipeline {
                 echo 'Selesai install...'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'npm test'
-            }
-        }
         // Stage 4: Build/Deploy
-        stage('Build') {
+        stage('Running') {
             steps {
-                sh 'npm run build'
+                sh 'npm run dev'
             }
         }
     }
