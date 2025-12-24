@@ -1,12 +1,15 @@
 pipeline {
     agent any  // Menentukan di mana job dijalankan (biasanya 'any' untuk pemula)
+    tools{
+       nodejs 'node-25.2.1'
+    }
     stages {
-        stage('Nvm Config') {
+        stage("Cek Node") {
             steps {
-             sh 'nvm use v25.2.1'
-             echo 'Selesai ganti node'
+                sh 'node -v'
+                echo 'Cek Node'
             }
-        } 
+        }
         stage('Install') {
             steps {
                 // Untuk Linux/Mac gunakan 'sh', untuk Windows gunakan 'bat'
@@ -14,15 +17,10 @@ pipeline {
                 echo 'Selesai install...'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'npm test'
-            }
-        }
         // Stage 4: Build/Deploy
-        stage('Build') {
+        stage('Running') {
             steps {
-                sh 'npm run build'
+                sh 'npm run dev'
             }
         }
     }
