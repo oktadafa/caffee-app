@@ -20,12 +20,7 @@ pipeline {
                 echo 'Selesai install...'
             }
         }
-        // Stage 4: Build/Deploy
-        stage('Running') {
-            steps {
-                sh 'npm run dev'
-            }
-        }
+
     }
     
     // Blok Post: Jalan setelah semua stage selesai (untuk notifikasi)
