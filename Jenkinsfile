@@ -3,15 +3,17 @@ pipeline {
     stages {
         stage("Docker Compose") {
             steps {
-                sh 'cd devops'
-            }
+         dir('devops') {
+                    script {
+                        echo "Saya sedang berada di folder: devops"
+                        
+                        // Jalankan perintah di sini
+                        // Ingat diskusi kita tadi: Gunakan 'docker compose' (tanpa strip) untuk versi baru
+                        sh 'docker compose up -d --build'
+                    }
+                }   }
         }
 
-        stage("Running") {
-            steps {
-                sh 'docker-compose up -d'
-            }
-        }
     }
     
     // Blok Post: Jalan setelah semua stage selesai (untuk notifikasi)
