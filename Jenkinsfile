@@ -1,26 +1,17 @@
 pipeline {
     agent any  // Menentukan di mana job dijalankan (biasanya 'any' untuk pemula)
-    tools{
-       nodejs 'node-25.2.1'
-    }
-    triggers {
-        githubPush()
-    }
     stages {
-        stage("Cek Node") {
+        stage("Docker Compose") {
             steps {
-                sh 'node -v'
-                echo 'Cek Node'
-            }
-        }
-        stage('Install') {
-            steps {
-                // Untuk Linux/Mac gunakan 'sh', untuk Windows gunakan 'bat'
-                sh 'npm install' 
-                echo 'Selesai install...'
+                sh 'cd devops'
             }
         }
 
+        stage("Running") {
+            steps {
+                sh 'docker compose up -d'
+            }
+        }
     }
     
     // Blok Post: Jalan setelah semua stage selesai (untuk notifikasi)
