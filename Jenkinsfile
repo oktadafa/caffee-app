@@ -9,7 +9,7 @@ pipeline {
                         
                         // Jalankan perintah di sini
                         // Ingat diskusi kita tadi: Gunakan 'docker compose' (tanpa strip) untuk versi baru
-                        sh 'docker compose up -d --build'
+                        sh 'docker-compose up -d --build'
                     }
                 }   }
         }
